@@ -27,27 +27,46 @@ webpack(webpackConfig, (err, stats) => {/* do something here */});
 createVendorConfig(tradieConfig : object) : object
 ```
 
-Creates config for a vendor bundle utilising webpack's `DllPlugin`.
+Creates config for a vendor bundle using webpack's `DllPlugin`.
 
-```
+- `json-loader`
+- `babel-loader`
+- ...
+
+```js
 createClientConfig(tradieConfig : object) : object
 ```
 
 Creates config for one or more client bundles with the following features:
 
-- abc
- 
+- `json-loader`
+- `babel-loader`
+- `file-loader` (`.jpeg`, `.jpg`, `.gif`, `.png`, `.svg`, `.woff`, `.ttf` and `.eot`)
+- `css-loader`, `postcss-loader`, `resolve-url-loader` and `sass-loader`
+- optimisation (`DefinePlugin`, `UglifyPlugin`, hashing etc)
+- creation of a separate stylesheet containing style files
+- use of `DllReferencePlugin`
+- ...
 
-```
+
+```js
 createServerConfig(tradieConfig : object) : object
 ```
 
 Creates config for a server bundle with the following features:
 
-- files with style extensions are ignored 
+- `json-loader`
+- `babel-loader`
+- exclusion of style files
+- ...
 
-```
+```js
 createTestConfig(tradieConfig : object) : object
 ```
 
 Creates config for a test bundle with the following features:
+
+- `json-loader`
+- `babel-loader`
+- `mocha` test runner
+- ...
