@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/util/mapExtensionsToRegExp.js"],"names":[],"mappings":";;;;;kBAEwB,qB;;AAFxB;;;;;;AAEe,SAAS,qBAAT,CAA+B,UAA/B,EAA2C;AACxD,SAAO,0BAAS,UAAT,CAAP;AACD","file":"mapExtensionsToRegExp.js","sourcesContent":["import extRegex from 'ext-to-regex';\n\nexport default function mapExtensionsToRegExp(extensions) {\n  return extRegex(extensions);\n}\n"]}
